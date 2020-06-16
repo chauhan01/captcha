@@ -118,7 +118,7 @@ for image in test_images:
 
     # if output directory does not exist creat one
     if not os.path.exists(OUTPUT_FOLDER_DETECTED):
-    	os.makedirs(OUTPUT_FOLDER_DETECTED)
+		os.makedirs(OUTPUT_FOLDER_DETECTED)
     save_path_detected = os.path.join(OUTPUT_FOLDER_DETECTED, captcha_text)
     detected_path = os.path.join(save_path_detected + '.png')
     cv2.imwrite(detected_path, image)
