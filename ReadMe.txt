@@ -12,3 +12,4 @@ Above command will return the detected image and save the detected images in "de
 ----------------------------------------------------------------------
 Here is the [Colab Notebook implementation](https://colab.research.google.com/drive/1uydSM5lhbi9Kaq9w1_T6n176PifZwUR0?usp=sharing)
 Just run all the cells.
+[Lets go to Quora](https://www.quora.com)
