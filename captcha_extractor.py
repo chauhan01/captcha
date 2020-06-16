@@ -11,7 +11,7 @@ from preprocessing import *
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--input", required=True,
 	help="path to input image directory")
-ap.add_argument("-save", "--save_solved", required=True,
+ap.add_argument("-save", "--save_solved", type=str2bool, const=True, default=False,required=True,
 	help="True if you want to save the solved output")
 ap.add_argument("-m", "--model", required=True,
 	help="path to model.hdf5 file")
