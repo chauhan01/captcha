@@ -23,9 +23,7 @@ test_image_folder = args['input']
 OUTPUT_FOLDER_DETECTED = 'detected output'
 OUTPUT_FOLDER_SOLVED = 'solved captcha output'
 
-# if output directory does not exist creat one
-if not os.path.exists(OUTPUT_FOLDER):
-    os.makedirs(OUTPUT_FOLDER)
+
 LB = args['labels']
 MODEL = args['model']
 save_solved = args['save_solved']
@@ -115,14 +113,19 @@ for image in test_images:
         cv2.rectangle(image, (x - 2, y - 2), (x + w + 4, y + h + 4), (0, 0, 255), 1)
         cv2.putText(image, letter, (x + 7, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.70, (0, 0, 255), 2)
 
-    # Print the captcha's text
+   
     captcha_text = "".join(predictions)
 
+    # if output directory does not exist creat one
+    if not os.path.exists(OUTPUT_FOLDER_DETECTED):
+    	os.makedirs(OUTPUT_FOLDER_DETECTED)
     save_path_detected = os.path.join(OUTPUT_FOLDER_DETECTED, captcha_text)
     detected_path = os.path.join(save_path_detected + '.png')
     cv2.imwrite(detected_path, image)
 
     if save_solved == True:
+	if not os.path.exists(OUTPUT_FOLDER_SOLVED):
+		os.makedirs(OUTPUT_FOLDER_DETECTED)
         save_path_solved = os.path.join(OUTPUT_FOLDER_SOLVED, captcha_text)
         solved_path = os.path.join(save_path_solved + '.png')
         cv2.imwrite(solved_path, orignal_image)
