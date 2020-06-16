@@ -123,7 +123,7 @@ for image in test_images:
     detected_path = os.path.join(save_path_detected + '.png')
     cv2.imwrite(detected_path, image)
 
-    if save_solved == True:
+    if save_solved == "True":
         if not os.path.exists(OUTPUT_FOLDER_SOLVED):
             os.makedirs(OUTPUT_FOLDER_DETECTED)
         save_path_solved = os.path.join(OUTPUT_FOLDER_SOLVED, captcha_text)
