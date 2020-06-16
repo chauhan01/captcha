@@ -129,4 +129,4 @@ for image in test_images:
         save_path_solved = os.path.join(OUTPUT_FOLDER_SOLVED, captcha_text)
         solved_path = os.path.join(save_path_solved + '.png')
         cv2.imwrite(solved_path, orignal_image)
-    else: Pass
+    else: pass
