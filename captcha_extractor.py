@@ -116,7 +116,7 @@ for image in test_images:
    
     captcha_text = "".join(predictions)
 
-    # if output directory does not exist creat one
+   # if output directory does not exist creat one
     if not os.path.exists(OUTPUT_FOLDER_DETECTED):
         os.makedirs(OUTPUT_FOLDER_DETECTED)
     save_path_detected = os.path.join(OUTPUT_FOLDER_DETECTED, captcha_text)
@@ -125,7 +125,7 @@ for image in test_images:
 
     if save_solved == "True":
         if not os.path.exists(OUTPUT_FOLDER_SOLVED):
-            os.makedirs(OUTPUT_FOLDER_DETECTED)
+            os.makedirs(OUTPUT_FOLDER_SOLVED)
         save_path_solved = os.path.join(OUTPUT_FOLDER_SOLVED, captcha_text)
         solved_path = os.path.join(save_path_solved + '.png')
         cv2.imwrite(solved_path, orignal_image)
