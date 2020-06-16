@@ -6,9 +6,7 @@ How to use?
 
 Run captcha_solver.py using the below line in command prompt
 
-python captcha_solver.py --input {path to the input directory} --output {path to the output directory} --model {path to the model.hdf5} --labels {path to the labels.pickle file}
+python captcha_solver.py --input {path to the input directory} --save_solved {True/False, if true save the solved images} --model {path to the model.hdf5} --labels {path to the labels.pickle file}
 
-Above command will return the detected image and display the detected image and save the solved captcha image to output directory. 
+Above command will return the detected image and save the detected images in "detected output" folder. If "--save_solved" is true then solved captcha image will also be saved to the "solved output" folder. 
 ----------------------------------------------------------------------
-If you want to train the model again you can use the captcha_solver.ipynb
-You can also test the model by using the "Test" section of the notebook.
